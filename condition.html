@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let grade="";
+        let score=prompt('Nhập điểm của học sinh');
+        /*
+        score >=9 ? grade=("xuất sắc"):grade=("")
+        score >=8 && score <9 ? grade=("giỏi"):grade=("");
+        score >=7 && score <8 ? grade=("khá"):grade=("");
+        score >=5 && score <7 ? grade=("trung bình"):grade=("yếu");
+        */
+        score >=10 ? alert('vui lòng nhập lại')
+        :score >= 9 && score <=10 ? grade=("xuất sắc")
+            :(score >=8 ? grade=("giỏi")
+                :(score >=7 ? grade=("khá")
+                    :(score >= 5 ? grade=("trung bình")
+                        :(score >=0 ? grade=("yếu") : alert('vui lòng nhập lại') ))))
+            
+        document.write('Grade: ' + grade);
+    </script>
+
+</body>
+</html>
