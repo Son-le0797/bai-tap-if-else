@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Xếp hạng bằng swich-case</h2>
+        <p>Nhập điểm cần kiểm tra</p>
+        <input type="text" id="score" placeholder="Nhập điểm ...">
+        <input type="button" id="submit" value="Kiểm tra">
+        <p> Xếp loại : <span id="grade"></span></p>
+    </div>
+    <script>
+        let test = document.getElementById("submit");
+            test.addEventListener("click", submitFunc);
+        function submitFunc(){
+            let score = document.getElementById("score").value;
+            let grade;
+            switch (((score <=10)? ((score >=9)? "9": (score >=8)? "8" : (score >=7)? "7" : (score>=6)? "6": (score>=0)? "5": "null") : "null")){
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                    grade = "Yếu";
+                    break;
+                case "6":
+                    grade = "Trung bình";
+                    break;
+                case "7":
+                    grade = "Khá";
+                    break;
+                case "8":
+                    grade = "Giỏi";
+                    break;
+                case "9":
+                case "10":
+                    grade = "Xuất sắc";
+                    break;
+                default: 
+                    grade = "Không xếp loại được";
+            }
+            document.getElementById("grade").innerText = (grade);
+        }
+    </script>
+</body>
+</html>
